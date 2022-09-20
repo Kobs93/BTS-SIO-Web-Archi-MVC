@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block title%} Ajout d'un étudiant{% endblock %}
+
+{% block content %}
+<form action="inscription.html.twig" method="post">
+    <div id="container">
+        <h1>Inscription d'un nouvel étudiant</h1>
+        <label> Nom :</label>
+        <input type="text" placeholder="Entrez votre nom de famille" name="lastname">
+        <br>
+        <label>Prenom : </label>
+        <input type="text" placeholder="Entrez votre prénom" name="firstname">
+        <br>
+        <label>Login : </label>
+        <input type="text" placeholder="Entrez votre login" name="login">
+        <br>
+        <label>Email : </label>
+        <input type="email" placeholder="Entrez votre adresse mail"name="email">
+        <br>
+        <label>Mot de passe : </label>
+        <input type="password" placeholder="Saisir un mot de passe" name="password">
+        <br>
+        <button>Envoyer</button>
+    </div>
+</form>
+{% endblock%}

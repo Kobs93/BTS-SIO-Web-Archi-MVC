@@ -51,4 +51,12 @@ class QuestionnaireModel
         return  $questionnaire;
     }
 
+    public function InsertionEtudiant()
+    {
+        $requete = $this->bdd->prepare('INSERT INTO Etudiant VALUES([$_POST["lastname"],[$_POST["firstname"]], [$_POST["login"]],[$_POST["email"]], [$_POST["password"]])');
+        $requete->execute();
+
+
+    }
+
 }

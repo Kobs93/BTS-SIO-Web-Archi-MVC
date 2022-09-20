@@ -14,6 +14,8 @@ $dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $rout
     $route->addRoute('GET', '/lister', 'Quizz\Controller\Questionnaire\ListController');
     $route->addRoute('GET', '/detail/{id:\d+}', 'Quizz\Controller\Questionnaire\ViewController');
     $route->addRoute('GET', '/hello/{id:\d+}', 'Quizz\Controller\HelloController');
+    $route->addRoute(['GET', 'POST'], '/Etudiant/add', 'Quizz\EtudiantController');
+    $route->addRoute(['GET', 'POST'], '/inscriptionetudiant', 'Quizz\Controller\InscriptionEtudiantController');
 
 });
 // Dispatcher -> Couche view
